@@ -23,7 +23,7 @@ function sumSec(m1,m2){
 
 //開始処理
 function setTime(){
-　count_time = [
+  count_time = [
 
 ];
 

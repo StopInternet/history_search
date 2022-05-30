@@ -14,7 +14,6 @@ form{
   list-style: none;
 }
 /*上位タブ設定*/
-
 #global{
   width: 980px;
   clear: both;
@@ -22,17 +21,10 @@ form{
   margin: 16px auto;
 }
 
-#header_contact {
-  background-image: url(../images/button.png);
-  color: white;
-  font-size: 30px;
-}
-
 #global ul {
-  width: 96px;
-  box-sizing: border-box;
-  list-style-type: none;
-
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #global ul li {
@@ -55,8 +47,9 @@ form{
 }
 
 #global ul li a:hover{
-  background-color: rgb(20, 199, 199);
+  background-color: rgb(17, 230, 212);
 }
+
 
 h1,h2,h3,h4,h5,h6{
   margin-top:0;

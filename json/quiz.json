@@ -1,0 +1,33 @@
+{
+  "quiz": [
+    {
+      "q": "",
+      "a": [
+          ],
+      "correct": 4,
+      "commentary": ""
+      },
+      {
+      "q": "",
+      "a": [
+          ],
+      "correct": 4,
+      "commentary": ""
+      }
+  ],
+  "rank": [
+      {
+          "count": 5,
+          "comment": "すごいです。"
+      }, {
+          "count": 3,
+          "comment": "まあまあです。"
+      }, {
+          "count": 1,
+          "comment": "そんなにです。"
+      }, {
+          "count": 0,
+          "comment": "だめです。"
+      }
+  ]
+}
