@@ -16,6 +16,9 @@ Pythonを使う
 
 6.歴史人物情報を追加できる。
 
+7.ログインページを制作し、
+歴史人物情報を追加できるようにする。
+
 歴史人物の情報
 id(頭文字から2文字取る）
 name(VARCHAERは15にする）
@@ -25,9 +28,12 @@ age(没年時の歳を打ち込む）
 
 http://localhost/Koukasokutei3/index.html
 
-util.phpは授業で使ったものから
-（自分作るぐらいならあったもの使った方がいいから）
 
-http://localhost/Koukasokutei3/php/index.php
+使用サイト
+クッキー及びセッションの使い方を見るために参照
+https://www.php.net/manual/ja/function.setcookie.php
 
-https://tcd-theme.com/2021/07/javascript-miniquiz.html
+データベースに追加する処理を参考
+https://www.flatflag.nir87.com/insert-942
+
+他　多数

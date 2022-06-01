@@ -1,7 +1,7 @@
 <?php
-//前提処理
-require_once("../../lib/util.php");
-$_POST = es($_POST);
+//前のページに返す処理。
+require_once("../../lib/back.php");
+//更新日時の判定
 $date = date("Y/n/j G:i:s", time());
 
 //織田信長チャット管理。名言集より抜粋
@@ -17,44 +17,25 @@ $chat = [
   9 => "死なない者は存在しない。". PHP_EOL,
   10 => "泣かぬなら殺してしまえ。". PHP_EOL,
   11 => "楽になろう。三途の川渡れば楽なれるよ".PHP_EOL,
+  12 => "おちんちんすこ". PHP_EOL,
+  13 => "ワシはフェラチオが得意じゃ！".PHP_EOL,
 ];
 //ユーザ指定
 $oda = PHP_EOL."織田信長：".PHP_EOL;
 $you = PHP_EOL."あなた：".PHP_EOL;
 //チャット内容を決定する。
-$value1 = rand(1,11);
+$value1 = rand(1,13);
 $chat_oda = $oda.$chat[$value1];
 $ststem1 = PHP_EOL."-----------". PHP_EOL;
 $writedata = PHP_EOL."更新日：$date". PHP_EOL;
 ?>
-
-<?php
-//入力内容の処理
-$isError =false;
-if (isset($_POST['chat'])){
-  $chat2 = trim($_POST['chat']);
-  //ユーザー側のチャット内容を決定
-  $chat_you = $you.$chat2;
-  if($chat2 ===""){
-    $isError =true;
-  }
-} else {
-  $isError =true;
-}
-?>
 <?php 
+//txtファイルの読み込み
 $filechat = "oda_chat.txt";
-try {
-  $fileObj = new SplFileObject($filechat,"a+b");
-} catch (Exception $e){
-  echo '<span calss = "error">エラーがありました。</span>';
-  $err = $e->getMesseage();
-  exit($err);
-}
+$fileObj = new SplFileObject($filechat,"a+b");
 //入力内容がない場合は元のページに返す。
 if(empty(trim($_POST['chat']))){
-  $url = "http://". $_SERVER['HTTP_HOST']. dirname($_SERVER['PHP_SELF']);
-  header("Location:". $url. "/input_chat.php");
+  back();
   exit();
 }
 //txtに書き込む
@@ -67,6 +48,6 @@ $system2_chat = $fileObj->fwrite($writedata);
 $fileObj->flock(LOCK_UN);
 
 //処理終了時に元のページに返す
-$url = "http://". $_SERVER['HTTP_HOST']. dirname($_SERVER['PHP_SELF']);header("Location:". $url . "/input_chat.php");
+back();
 exit();
 ?>

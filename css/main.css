@@ -13,6 +13,12 @@ form{
   text-align: center;
   list-style: none;
 }
+form ul {
+  list-style: none;
+}
+p #login{
+  text-align: right;
+}
 /*上位タブ設定*/
 #global{
   width: 980px;
